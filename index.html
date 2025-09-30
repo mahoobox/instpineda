@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IE Técnica Agroindustrial Francisco Pineda López</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #4E7238 0%, #3d5a2c 100%);
+    }
+
+    .text-primary {
+      color: #4E7238;
+    }
+
+    .bg-primary {
+      background-color: #4E7238;
+    }
+
+    .text-secondary {
+      color: #EC2229;
+    }
+
+    .bg-secondary {
+      background-color: #EC2229;
+    }
+
+    .text-accent {
+      color: #F5E620;
+    }
+
+    .bg-accent {
+      background-color: #F5E620;
+    }
+
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-divider {
+      height: 4px;
+      width: 80px;
+      background: linear-gradient(90deg, #EC2229, #F5E620);
+      margin: 0 auto 2rem;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <img src="images/escudo.gif" alt="Escudo" class="h-16 w-16 mr-3">
+          <div>
+            <h1 class="text-lg font-bold text-primary">IE Técnica Agroindustrial</h1>
+            <p class="text-sm text-gray-600">Francisco Pineda López</p>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#inicio" class="text-gray-700 hover:text-primary font-medium transition">Inicio</a>
+          <a href="#nosotros" class="text-gray-700 hover:text-primary font-medium transition">Nosotros</a>
+          <a href="#oferta" class="text-gray-700 hover:text-primary font-medium transition">Oferta Académica</a>
+          <a href="#contacto" class="text-gray-700 hover:text-primary font-medium transition">Contacto</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-primary">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#inicio" class="block text-gray-700 hover:text-primary font-medium">Inicio</a>
+        <a href="#nosotros" class="block text-gray-700 hover:text-primary font-medium">Nosotros</a>
+        <a href="#oferta" class="block text-gray-700 hover:text-primary font-medium">Oferta Académica</a>
+        <a href="#contacto" class="block text-gray-700 hover:text-primary font-medium">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-gradient pt-32 pb-20 px-4 mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+        <div class="text-white">
+          <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Formando Líderes <span class="text-accent">Agroindustriales</span>
+          </h2>
+          <p class="text-xl mb-8 text-gray-100">
+            Más de 60 años impulsando el desarrollo rural y la excelencia educativa en Villarrica, Tolima
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#oferta"
+              class="bg-secondary hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition transform hover:scale-105">
+              Ver Oferta Académica
+            </a>
+            <a href="#contacto"
+              class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition transform hover:scale-105">
+              Contáctanos
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img src="images/escudo.gif" alt="Escudo Institucional" class="w-80 h-80 object-contain drop-shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="stat-card p-8 rounded-xl text-center hover-lift">
+          <div class="text-5xl font-bold text-primary mb-2">60+</div>
+          <div class="text-gray-600 font-medium">Años de Historia</div>
+        </div>
+        <div class="stat-card p-8 rounded-xl text-center hover-lift">
+          <div class="text-5xl font-bold text-secondary mb-2">10+</div>
+          <div class="text-gray-600 font-medium">Sedes Educativas</div>
+        </div>
+        <div class="stat-card p-8 rounded-xl text-center hover-lift">
+          <div class="text-5xl font-bold text-primary mb-2">100%</div>
+          <div class="text-gray-600 font-medium">Mixta e Inclusiva</div>
+        </div>
+        <div class="stat-card p-8 rounded-xl text-center hover-lift">
+          <div class="text-5xl font-bold text-secondary mb-2">1962</div>
+          <div class="text-gray-600 font-medium">Año de Fundación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="nosotros" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Nuestra Institución</h2>
+        <div class="section-divider"></div>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Una tradición educativa comprometida con el desarrollo agroindustrial de nuestra región
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <img src="images/001.jpg" alt="Instalaciones" class="rounded-2xl shadow-2xl w-full">
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold text-primary mb-6">Nuestra Misión</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Formar técnicos agroindustriales con conocimientos teórico-prácticos en administración de proyectos
+            agroindustriales y agrícolas, investigación agraria y desarrollo sostenible, respondiendo a las necesidades
+            del contexto rural de la región.
+          </p>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h4 class="font-bold text-secondary mb-3">Valores Institucionales</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-accent mr-2">●</span>
+                Trabajo en equipo
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent mr-2">●</span>
+                Transparencia
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent mr-2">●</span>
+                Sentido de pertenencia
+              </li>
+              <li class="flex items-start">
+                <span class="text-accent mr-2">●</span>
+                Excelencia educativa
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-3xl font-bold text-primary mb-6">Nuestra Visión</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Consolidarse como una institución líder en educación técnica agroindustrial, reconocida por la calidad
+            académica, su compromiso social, e impulso de la ética y el emprendimiento rural.
+          </p>
+          <div class="bg-primary text-white p-6 rounded-xl">
+            <h4 class="font-bold mb-3 text-xl">Desde 1962</h4>
+            <p class="text-gray-100">
+              Fundada por la Ordenanza 29 de la Asamblea del Tolima, inicialmente como colegio de bachillerato para
+              varones, hoy somos una institución mixta que sirve a toda la comunidad de Villarrica.
+            </p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <img src="images/002.jpg" alt="Estudiantes" class="rounded-2xl shadow-2xl w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Offer -->
+  <section id="oferta" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Oferta Académica</h2>
+        <div class="section-divider"></div>
+        <p class="text-xl text-gray-600">Educación integral desde preescolar hasta media técnica</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-lg hover-lift">
+          <div
+            class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 text-2xl font-bold">
+            📚
+          </div>
+          <h3 class="text-2xl font-bold text-primary mb-4">Preescolar y Primaria</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Jardín II</li>
+            <li>• Transición</li>
+            <li>• Básica Primaria (1° a 5°)</li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-50 to-white p-8 rounded-2xl shadow-lg hover-lift">
+          <div
+            class="bg-secondary text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 text-2xl font-bold">
+            🎓
+          </div>
+          <h3 class="text-2xl font-bold text-secondary mb-4">Básica Secundaria</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Grados 6° a 9°</li>
+            <li>• Formación integral</li>
+            <li>• Preparación técnica</li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-yellow-50 to-white p-8 rounded-2xl shadow-lg hover-lift">
+          <div
+            class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 text-2xl font-bold">
+            🌾
+          </div>
+          <h3 class="text-2xl font-bold text-primary mb-4">Media Técnica</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Grados 10° y 11°</li>
+            <li>• Especialidad agroindustrial</li>
+            <li>• Especialidad agrícola</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-primary to-green-700 text-white p-8 rounded-2xl shadow-xl">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-6 md:mb-0">
+            <h3 class="text-2xl font-bold mb-2">Educación para Adultos</h3>
+            <p class="text-gray-100">Modelos flexibles: A Crecer, SER, Escuela Nueva, programas para jóvenes y adultos
+            </p>
+          </div>
+          <a href="#contacto"
+            class="bg-accent text-primary px-8 py-4 rounded-full font-bold hover:bg-yellow-400 transition transform hover:scale-105">
+            Más Información
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Vida Institucional</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="relative overflow-hidden rounded-2xl shadow-xl group">
+          <img src="images/001.jpg" alt="Actividades"
+            class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h4 class="text-xl font-bold mb-2">Instalaciones Modernas</h4>
+            <p class="text-sm">Espacios diseñados para el aprendizaje</p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl shadow-xl group">
+          <img src="images/002.jpg" alt="Eventos"
+            class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h4 class="text-xl font-bold mb-2">Actividades Culturales</h4>
+            <p class="text-sm">Semana cultural y eventos comunitarios</p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl shadow-xl group">
+          <img src="images/003.jpg" alt="Comunidad"
+            class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h4 class="text-xl font-bold mb-2">Comunidad Educativa</h4>
+            <p class="text-sm">Gobierno escolar y participación estudiantil</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Nuestras Sedes</h2>
+        <div class="section-divider"></div>
+        <p class="text-xl text-gray-600">Presencia urbana y rural en toda la región</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-primary text-white p-8 rounded-2xl shadow-xl">
+          <h3 class="text-2xl font-bold mb-6">Sede Principal</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <span class="text-accent text-2xl mr-4">📍</span>
+              <div>
+                <p class="font-semibold">Dirección</p>
+                <p class="text-gray-100">Carrera 5 con Calle 4, Barrio Miraflores<br>Villarrica, Tolima</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-xl">
+          <h3 class="text-2xl font-bold text-primary mb-6">Sedes Rurales</h3>
+          <div class="grid grid-cols-2 gap-3 text-gray-700">
+            <div>• Alejandría</div>
+            <div>• Alto Cuinde Blanco</div>
+            <div>• Bajo Bélgica</div>
+            <div>• Bajo Roble</div>
+            <div>• Berlín</div>
+            <div>• Cuatromil</div>
+            <div>• El Castillo</div>
+            <div>• El Crucero</div>
+            <div>• El Jordán</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="py-20 bg-green-800 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Contáctanos</h2>
+        <div class="section-divider bg-white"></div>
+        <p class="text-xl text-gray-100">Estamos aquí para atenderte</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white/10 backdrop-blur p-6 rounded-xl">
+          <div class="text-accent text-3xl mb-3">📞</div>
+          <h3 class="text-xl font-bold mb-2">Teléfonos</h3>
+          <p>2475005</p>
+          <p>3107619839</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur p-6 rounded-xl">
+          <div class="text-accent text-3xl mb-3">✉️</div>
+          <h3 class="text-xl font-bold mb-2">Email</h3>
+          <p>contacto@instpineda.edu.co</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/30">
+          <h3 class="text-2xl font-bold mb-6">Envíanos un mensaje</h3>
+          <form id="contact-form" class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <input type="text" placeholder="Nombre completo"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-primary focus:border-transparent"
+                required>
+              <input type="email" placeholder="Correo electrónico"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-primary focus:border-transparent"
+                required>
+            </div>
+            <input type="text" placeholder="Asunto"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-primary focus:border-transparent"
+              required>
+            <textarea placeholder="Mensaje" rows="4"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-primary focus:border-transparent"
+              required></textarea>
+            <button type="submit"
+              class="w-full bg-secondary hover:bg-red-700 text-white font-bold py-4 rounded-lg transition transform hover:scale-105">
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+
+        <div class="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/30">
+          <h3 class="text-2xl font-bold mb-6">Ubicación</h3>
+          <div class="bg-gray-200 rounded-lg overflow-hidden h-96">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-74.60371794547252%2C3.9326720712763823%2C-74.59371794547252%2C3.9406720712763823&layer=mapnik&marker=3.9366720712763823%2C-74.59871794547252"
+              style="border: 0">
+            </iframe>
+          </div>
+          <div class="mt-4">
+            <a href="https://www.openstreetmap.org/?mlat=3.9366720712763823&mlon=-74.59871794547252#map=17/3.9366720712763823/-74.59871794547252"
+              target="_blank" class="text-accent hover:text-yellow-300 underline text-sm">
+              Ver mapa más grande →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="images/escudo.gif" alt="Escudo" class="h-12 w-12 mr-3">
+            <div>
+              <h4 class="font-bold">IE Técnica Agroindustrial</h4>
+              <p class="text-sm text-gray-400">Francisco Pineda López</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm">
+            Formando líderes agroindustriales desde 1962
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Información</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li>Código DANE: 173873000041</li>
+            <li>Calendario A</li>
+            <li>Institución Oficial</li>
+            <li>Carácter: Mixto</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Contacto</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li>Carrera 5 con Calle 4</li>
+            <li>Barrio Miraflores</li>
+            <li>Villarrica, Tolima</li>
+            <li>Tel: 2475005 - 3107619839</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Institución Educativa Técnica Agroindustrial Francisco Pineda López. Todos los derechos
+          reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+      e.target.reset();
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('shadow-xl');
+      } else {
+        nav.classList.remove('shadow-xl');
+      }
+    });
+  </script>
+</body>
+
+</html>
